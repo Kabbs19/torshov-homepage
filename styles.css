@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+
+    /* Colours */
+
+    --gray: #1D3557;
+    --blue: #457B9D;
+    --green: ##F1FAEE;
+    --white: #ffffff;
+
+    /* Font Sizes */
+
+    --step-1: 2rem;
+    --step-2: 1.875rem;
+    --step-3: 1.5rem;
+    --step-4: 1.25rem;
+    --step-5: 1.125rem;
+    --step-6: 1rem;
+    --step-base: 1rem;
+    --step-sm: 0.875rem;
+    --step-xs: .075rem;
+    --step-tny: 0.635;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("images/torshov-image.webp");
+    background-size: cover;
+}
