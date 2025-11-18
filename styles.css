@@ -24,6 +24,23 @@ body {
     --step-sm: 0.875rem;
     --step-xs: .075rem;
     --step-tny: 0.635;
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-lg: 16px;
+    --space-xl: 20px;
+    --space-xxl: 24px;
+
+    /* Border Radii
+    --border-rad-2:
+    --border-rad-10: 10%;
+    --border-rad-20: 20%;
+    --border-rad-30: 30%;
+    --border-rad-50: 50%;
+    */
+
 }
 
 #header {
@@ -35,4 +52,26 @@ body {
     background-image: url("images/torshov-image.webp");
     background-size: cover;
     background-position: center;
+}
+
+#header-title {
+    color: var(--white);
+    background-color: var(--gray);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 225px;
+}
+
+#header-subtitle {
+    color: var(--white);
+    background-color: var(--blue);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 412px;
 }
