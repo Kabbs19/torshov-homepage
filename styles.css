@@ -9,7 +9,7 @@ body {
 
     --gray: #1D3557;
     --blue: #457B9D;
-    --green: ##F1FAEE;
+    --green: #F1FAEE;
     --white: #ffffff;
 
     /* Font Sizes */
@@ -74,4 +74,32 @@ body {
     justify-content: center;
     text-align: center;
     width: 412px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.blurb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.green-bg {
+    background-color: var(--green);
+}
+
+.text-center {
+    text-align: center;
 }
