@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,6 +13,7 @@ body {
 
     --gray: #1D3557;
     --blue: #457B9D;
+    --sky-blue: #A8DADC;
     --green: #F1FAEE;
     --white: #ffffff;
 
@@ -25,23 +30,104 @@ body {
     --step-xs: .075rem;
     --step-tny: 0.635;
 
-    /* Spacing */
-    --space-xs: 4px;
-    --space-sm: 8px;
-    --space-md: 12px;
-    --space-lg: 16px;
-    --space-xl: 20px;
-    --space-xxl: 24px;
+     /* Spacing */
+    --space-1: 0.25rem; /* 4px */
+    --space-2: 0.5rem; /* 8px */
+    --space-3: 0.75rem; /* 12px */
+    --space-4: 1rem; /* 16px */
+    --space-5: 1.5rem; /* 24px */
+    --space-6: 2rem; /* 32px */
+    --space-7: 3rem; /* 48px */
+    --space-8: 4rem; /* 64px */
 
-    /* Border Radii
-    --border-rad-2:
-    --border-rad-10: 10%;
-    --border-rad-20: 20%;
-    --border-rad-30: 30%;
-    --border-rad-50: 50%;
-    */
+    /* Radii & shadows */
+    --radius-sm: 0.375rem; /* 6px */
+    --radius-md: 0.75rem; /* 12px */
+    --radius-lg: 1rem; /* 16px */
+
+    --shadow-1: 0 1px 2px hsl(240 10% 10% / 0.06);
+    --shadow-2: 0 2px 8px hsl(240 10% 10% / 0.10);
+    --shadow-3: 0 12px 24px hsl(240 10% 10% / 0.18);
 
 }
+
+/* Headings — use fluid steps */
+  h1 { font-size: var(--step-1); line-height: 1.1; }
+  h2 { font-size: var(--step-2); line-height: 1.2; }
+  h3 { font-size: var(--step-3); line-height: 1.25; }
+  h4 { font-size: var(--step-4); }
+  h5 { font-size: var(--step-5); }
+  h6 { font-size: var(--step-6); }
+
+  /* Spacing utilities */
+  
+  /* Margin */
+  .m-1 { margin: var(--space-1); }
+  .mt-1 { margin-top: var(--space-1); } .mr-1 { margin-right: var(--space-1); }
+  .mb-1 { margin-bottom: var(--space-1); } .ml-1 { margin-left: var(--space-1); } 
+
+  .m-2 { margin: var(--space-2); }
+  .mt-2 { margin-top: var(--space-2);} .mr-2 { margin-right: var(--space-2); }
+  .mb-2 { margin-bottom: var(--space-2); } .ml-2 { margin-left: var(--space-2); }
+
+  .m-3 { margin: var(--space-3); }
+  .mt-3 { margin-top: var(--space-3); } .mr-3 { margin-right: var(--space-3); }
+  .mb-3 { margin-bottom: var(--space-3); } .ml-3 { margin-left: var(--space-3); }
+
+  .m-4 { margin: var(--space-4); }
+  .mt-4 { margin-top: var(--space-4); } .mr-4 { margin-right: var(--space-4); }
+  .mb-4 { margin-bottom: var(--space-4); } .mb-4 { margin-left: var(--space-4); }
+
+  .m-5 { margin: var(--space-5); }
+  .mt-5 { margin-top: var(--space-5); } .mr-5 { margin-right: var(--space-5); }
+  .mb-5 { margin-bottom: var(--space-5); } .ml-5 { margin-left: var(--space-5); }
+
+  .m-6 { margin: var(--space-6); }
+  .mt-6 { margin-top: var(--space-6); } .mr-6 { margin-right: var(--space-6); }
+  .mb-6 { margin-bottom: var(--space-6); } .ml-6 { margin-left: var(--space-6); }
+
+  .m-7 { margin: var(--space-7); }
+  .mt-7 { margin-top: var(--space-7); } .mr-7 { margin-right: var(--space-7); }
+  .mb-7 { margin-bottom: var(--space-7); } .ml-7 { margin-left: var(--space-7); }
+
+  .m-8 { margin: var(--space-8); }
+  .mt-8 { margin-top: var(--space-8); } .mr-8 { margin-right: var(--space-8); }
+  .mb-8 { margin-bottom: var(--space-8); } .ml-8 { margin-left: var(--space-8); }
+
+  /* Padding */
+  .p-1 { padding: var(--space-1); }
+  .pt-1 { padding-top: var(--space-1); } .pr-1 { padding-right: var(--space-1); }
+  .pb-1 { padding-bottom: var(--space-1); } .pl-1 { padding-left: var(--space-1); } 
+
+  .p-2 { padding: var(--space-2); }
+  .pt-2 { padding-top: var(--space-2);} .pr-2 { padding-right: var(--space-2); }
+  .pb-2 { padding-bottom: var(--space-2); } .pl-2 { padding-left: var(--space-2); }
+
+  .p-3 { padding: var(--space-3); }
+  .pt-3 { padding-top: var(--space-3); } .pr-3 { padding-right: var(--space-3); }
+  .pb-3 { padding-bottom: var(--space-3); } .pl-3 { padding-left: var(--space-3); }
+
+  .p-4 { padding: var(--space-4); }
+  .pt-4 { padding-top: var(--space-4); } .pr-4 { padding-right: var(--space-4); }
+  .pb-4 { padding-bottom: var(--space-4); } .pl-4 { padding-left: var(--space-4); }
+
+  .p-5 { padding: var(--space-5); }
+  .pt-5 { padding-top: var(--space-5); } .pr-5 { padding-right: var(--space-5); }
+  .pb-5 { padding-bottom: var(--space-5); } .pl-5 { padding-left: var(--space-5); }
+
+  .p-6 { padding: var(--space-6); }
+  .pt-6 { padding-top: var(--space-6); } .pr-6 { padding-right: var(--space-6); }
+  .pb-6 { padding-bottom: var(--space-6); } .pl-6 { padding-left: var(--space-6); }
+
+  .p-7 { padding: var(--space-7); }
+  .pt-7 { padding-top: var(--space-7); } .pr-7 { padding-right: var(--space-7); }
+  .pb-7 { padding-bottom: var(--space-7); } .pl-7 { padding-left: var(--space-7); }
+
+  .p-8 { padding: var(--space-8); }
+  .pt-8 { padding-top: var(--space-8); } .pr-8 { padding-right: var(--space-8); }
+  .pb-8 { padding-bottom: var(--space-8); } .pl-8 { padding-left: var(--space-8); }
+
+/* Utility */
 
 #header {
     display: flex;
@@ -57,18 +143,16 @@ body {
 #header-title {
     color: var(--white);
     background-color: var(--gray);
-    padding: var(--space-xs) var(--space-sm);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 225px;
+    width: 300px;
 }
 
 #header-subtitle {
     color: var(--white);
     background-color: var(--blue);
-    padding: var(--space-sm) var(--space-md);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -76,16 +160,50 @@ body {
     width: 412px;
 }
 
-.flex-container {
+#guide {
     display: flex;
+    justify-content: center;
+    background-color: var(--white);
+    margin: var(--space-8) 0 var(--space-8) 0;
+}
+.guide-card {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    background-color: var(--sky-blue);
+    border-bottom: solid 5px var(--gray);
+    border-radius: 10px;
+    box-shadow: var(--shadow-3);
 }
 
-.flex-item {
-    
+.guide-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0 var(--space-4) 0 var(--space-4);
+}
+
+#card-img {
+    height: 250px;
+    border-radius: 10px;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
 }
 
 .flex-center {
     justify-content: center;
+}
+
+.flex-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 .blurb {
@@ -94,6 +212,13 @@ body {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    margin: 0 var(--space-6) 0 var(--space-6);
+}
+
+.blurb-img {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-2);
 }
 
 .green-bg {
