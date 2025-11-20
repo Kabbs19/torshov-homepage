@@ -138,26 +138,28 @@ body {
     background-image: url("images/torshov-image.webp");
     background-size: cover;
     background-position: center;
+    gap: var(--space-1);
 }
 
 #header-title {
     color: var(--white);
     background-color: var(--gray);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
     text-align: center;
-    width: 300px;
+    width: 320px;
 }
 
 #header-subtitle {
     color: var(--white);
     background-color: var(--blue);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
     text-align: center;
-    width: 412px;
+}
+
+#header-title,
+#header-subtitle {
+    max-width: 90%;
+    padding: var(--space-3) var(--space-4);
 }
 
 #guide {
@@ -165,6 +167,7 @@ body {
     justify-content: center;
     background-color: var(--white);
     margin: var(--space-8) 0 var(--space-8) 0;
+    padding: var(--space-6);
 }
 .guide-card {
     display: flex;
@@ -174,6 +177,7 @@ body {
     border-bottom: solid 5px var(--gray);
     border-radius: 10px;
     box-shadow: var(--shadow-3);
+    padding: var(--space-4);
 }
 
 .guide-description {
@@ -192,6 +196,12 @@ body {
 .flex-container {
     display: flex;
     width: 100%;
+}
+
+.blurb-flex-container {
+    display: flex;
+    width: 100%;
+    gap: var(--space-6);
 }
 
 .flex-center {
